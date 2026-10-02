@@ -7,7 +7,8 @@ public class Light extends Device{
     private static final double POWER_CONSUMPTION = 0.1f;
 
     public Light() {
-        super();
+        super("Light", true);
+        this.brightness = MIN_BRIGHTNESS;
     }
 
     @Override

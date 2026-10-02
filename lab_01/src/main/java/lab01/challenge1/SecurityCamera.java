@@ -5,6 +5,11 @@ public class SecurityCamera extends Device{
     private static final double RECORDING_CONSUMPTION = 8;
     private static final double IDLE_CONSUMPTION = 5;
 
+    public SecurityCamera() {
+        super("Security Camera", true);
+        recording = false;
+    }
+
     @Override
     public double powerUsage() {
         return recording ? RECORDING_CONSUMPTION : IDLE_CONSUMPTION;

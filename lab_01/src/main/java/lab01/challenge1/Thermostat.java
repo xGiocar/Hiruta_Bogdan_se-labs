@@ -6,6 +6,11 @@ public class Thermostat extends Device {
     private static final int MAX_TEMPERATURE = 28;
     private static final int MIN_TEMPERATURE = 16;
 
+    public Thermostat() {
+        super("Thermostat", true);
+        this.temperature = MIN_TEMPERATURE;
+    }
+
     @Override
     public double powerUsage() {
         return POWER_CONSUMPTION;

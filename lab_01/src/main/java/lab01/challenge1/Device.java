@@ -4,6 +4,11 @@ public abstract class Device {
     private String name;
     private boolean state;
 
+    public Device(String name, boolean state) {
+        this.state = state;
+        this.name = name;
+    }
+
     public void turnOn() {
         state = true;
     }
