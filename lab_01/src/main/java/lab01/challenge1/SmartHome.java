@@ -4,6 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SmartHome {
+
+    /*
+        Encapsulation - Device, Light, Thermostat, SecurityCamera
+        Abstraction - Device
+        Inheritance - Light, Thermostat, SecurityCamea
+        Polymorphism - powerUsage method
+    */
+
+
     List<Device> devices;
 
     public SmartHome() {
