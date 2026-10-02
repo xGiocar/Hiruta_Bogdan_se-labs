@@ -14,10 +14,11 @@ public abstract class Device {
     public String getName() {
         return name;
     }
-
     public boolean getState() {
         return state;
     }
+    public void setState(boolean state) {this.state = state;}
+
 
     public abstract double powerUsage();
     public abstract String status();
