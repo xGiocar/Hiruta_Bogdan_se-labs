@@ -39,4 +39,26 @@ public class SmartHome {
             System.out.println(sb.toString());
         }
     }
+
+    public static void run() {
+        SmartHome home = new SmartHome();
+        Light light = new Light();
+        Thermostat thermostat = new Thermostat();
+        SecurityCamera camera = new SecurityCamera();
+
+        home.addDevice(light);
+        home.addDevice(thermostat);
+        home.addDevice(camera);
+
+        home.printStatus();
+        System.out.println("Total power: " + home.totalPowerUsage());
+        home.turnEverythingOff();
+        home.printStatus();
+
+        try {
+            light.setBrightness(150);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.toString());
+        }
+    }
 }
